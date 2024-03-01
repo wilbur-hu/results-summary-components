@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        'md': '736px',
+      },
       colors: {
         'red': "#FF5555",
         'light-red': 'hsl(0, 100%, 67%)',

@@ -1,7 +1,6 @@
 import React from "react";
 import ResultBlock from "./resultblock";
 import SummaryBlock from "./summaryblock";
-import Button from "./button";
 
 export default function ResultSummaryCard() {
   const score = 76;
@@ -13,16 +12,23 @@ export default function ResultSummaryCard() {
   const visual = 73;
 
   return (
-    <div className="flex w-[375px] flex-col  bg-white">
-      <ResultBlock score={score} grade={grade} percentage={percentage} />
+    <div
+      className="flex w-[375px] flex-col bg-white
+      md:w-[736px] md:flex-row md:rounded-[32px] md:text-[18px]"
+    >
+      <ResultBlock
+        score={score}
+        grade={grade}
+        percentage={percentage}
+        className="md:w-[368px]"
+      />
       <SummaryBlock
-        className="mt-[24px]"
+        className="mt-[24px] md:mt-0"
         reaction={reaction}
         memory={memory}
         verbal={verbal}
         visual={visual}
       />
-      <Button className="mx-[30px] mb-[30px] mt-[24px]">Continue</Button>
     </div>
   );
 }
